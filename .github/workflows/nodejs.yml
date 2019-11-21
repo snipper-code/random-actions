@@ -2,7 +2,7 @@ name: Node CI
 
 on:
   pull_request:
-    types: [closed, labeled]
+    types: [closed]
     branches:
       - master
   label:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: npm install, build, and test
-      if: github.event.label.name == 'build_image'
+      if: github.event.label.name == 'build_image' && github.event.type == 'closed'
       run: |
         echo 'runs'
       env:
