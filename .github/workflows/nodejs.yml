@@ -1,19 +1,14 @@
 name: Node CI
 
-on:
-  pull_request:
-    types: [closed]
-    branches:
-      - master
-  label:
-    type: []
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: npm install, build, and test
-      if: github.event.label.name == 'build_image'
+    - name: download json file
       run: |
         echo 'runs'
+        curl https://raw.githubusercontent.com/snipper-code/resources/master/res.json -o res.json
+        ls
       env:
         CI: true
