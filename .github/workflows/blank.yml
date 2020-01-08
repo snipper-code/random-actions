@@ -4,6 +4,9 @@ on:
   create:
     tags:
       - call-break
+    branches:
+      - master
+
 jobs:
   build:
     runs-on: ubuntu-latest
