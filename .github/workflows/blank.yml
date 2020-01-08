@@ -3,7 +3,7 @@ name: Tag creation check
 on:
   create:
     tags:
-      - call-break
+      - call-break@*
     branches:
       - master
 
@@ -13,6 +13,6 @@ jobs:
     steps:
     - name: npm install, build, and test
       run: |
-        echo 'tag creation'
+        echo 'tag creation runs '
       env:
         CI: true
