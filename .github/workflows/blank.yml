@@ -1,15 +1,15 @@
-name: Node CI
+name: Tag creation check
 
 on:
   create:
     tags:
-      - v*
+      - call-break
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: npm install, build, and test
       run: |
-        echo 'runs'
+        echo 'tag creation'
       env:
         CI: true
