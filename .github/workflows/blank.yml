@@ -3,9 +3,7 @@ name: Tag creation check
 on:
   create:
     branches:
-      - master
-    tags:
-      - runTag*
+      - refs/tags/tagss
 
 jobs:
   build:
