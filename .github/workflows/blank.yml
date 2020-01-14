@@ -2,15 +2,14 @@ name: Tag creation check
 
 on:
   create:
-    branches:
-      - refs/tags/tagss
-
+    tags:
+      - call-break*
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: npm install, build, and test
       run: |
-        echo 'tag creation runs on run tag'
+        echo 'tag creation'
       env:
         CI: true
