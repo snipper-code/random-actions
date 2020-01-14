@@ -3,6 +3,7 @@ name: Tag creation check
 on:
   create:
     tags:
+      - !*
       - call-break*
 jobs:
   build:
