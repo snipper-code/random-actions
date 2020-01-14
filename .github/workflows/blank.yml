@@ -2,9 +2,10 @@ name: Tag creation check
 
 on:
   create:
+    branches:
+      - master
     tags:
-      - !*
-      - call-break*
+      - bh
 jobs:
   build:
     runs-on: ubuntu-latest
