@@ -2,10 +2,10 @@ name: Tag creation check
 
 on:
   create:
-    tags:
-      - call-break@*
     branches:
       - master
+    tags:
+      - v1
 
 jobs:
   build:
