@@ -5,7 +5,7 @@ on:
     branches:
       - master
     tags:
-      - v1
+      - runTag
 
 jobs:
   build:
@@ -13,6 +13,6 @@ jobs:
     steps:
     - name: npm install, build, and test
       run: |
-        echo 'tag creation runs '
+        echo 'tag creation runs on run tag'
       env:
         CI: true
